@@ -1,0 +1,22 @@
+<html t:type="layout" title="About studentDetails"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <div>
+        <t:if test="checkClass">
+        <table t:type="Grid" t:source="filteredResult" class="table table-hover table-bordered table-striped"
+                       style="background-color:#FFF8DC" cellpadding="5" cellspacing="5"
+               t:include="name,age,class_name,eng,hindi,math,physics,Chemistry,Biology,evs,Olympiad_eng,Olympiad_math"
+               t:reorder="name,age,class_name,eng,hindi,math,physics,Chemistry,Biology,evs,Olympiad_eng,Olympiad_math">
+
+        </table>
+            <p:else>
+                <table t:type="Grid" t:source="filteredResult" class="table table-hover table-bordered table-striped"
+                       style="background-color:#FFF8DC" cellpadding="5" cellspacing="5"
+                       t:include="name,age,class_name,eng,hindi,math,evs"
+                       t:reorder="name,age,class_name,eng,hindi,math,evs">
+                </table>
+            </p:else>
+        </t:if>
+    </div>
+</html>
