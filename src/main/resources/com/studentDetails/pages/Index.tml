@@ -1,0 +1,27 @@
+<html t:type="layout" title="studentDetails Index"
+      t:sidebarTitle="Framework Version"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+        <div>
+            <table class="Grid" style="background-color:#FFF8DC" >
+                <thead>
+                <tr>
+                    <th>Student Name</th>
+                </tr>
+                <tbody>
+                <tr t:type="loop" t:source="studentName" value="item">
+                    <td>
+                        <t:pagelink page="About" t:context="item.name">${item.name}</t:pagelink>
+                    </td>
+                </tr>
+                </tbody>
+
+                </thead>
+
+            </table>
+        </div>
+
+
+</html>
